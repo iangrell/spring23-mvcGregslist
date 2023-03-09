@@ -19,9 +19,12 @@ class AppState extends EventEmitter {
   cars = loadState('cars', [Car])
 
   /** @type {import('./Models/House').House[]} */
-  houses = [
-    new House({ color: '#fff' }), new House({ color: '#000' })
-  ]
+  // houses = [
+  //   new House({year: 2010, address: '123 Main St', bedrooms: 4, bathrooms: 2, sqft: 1900, price:300000, description: 'A house', imgUrl: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'}),
+  //   new House({year: 2000, address: '321 Weird Ave', bedrooms: 3, bathrooms: 2, sqft: 1500, price:250000, description: 'Another house', imgUrl: 'https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80'}),
+  // ]
+
+  houses = loadState('houses', [House])
 
   // NOTE super weird type case as an example
   /** @type {[Number, String, Number]} */
